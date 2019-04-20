@@ -60,11 +60,44 @@ public class VRInputModule : BaseInputModule
 
     private void ProcessPress(PointerEventData data)
     {
+        // set raycast that will be used for press
+        data.pointerPressRaycast = data.pointerCurrentRaycast;
 
+        // check to see if hitting object in scene, get the down handler, call it
+        GameObject newPointerPress = ExecuteEvents.ExecuteHierarchy(m_CurrentObject, data, ExecuteEvents.pointerDownHandler);
+
+        // if no down handler, try and get a click handler
+        if(newPointerPress == null)
+        {
+            newPointerPress = ExecuteEvents.GetEventHandler<IPointerClickHandler>(m_CurrentObject);
+        }
+
+        // set data
+        data.pressPosition = data.position;
+        data.pointerPress = newPointerPress;
+        data.rawPointerPress = m_CurrentObject;
     }
 
     private void ProcessRelease(PointerEventData data)
     {
+        // execute pointer up
+        ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
 
+        // check for click handler
+        GameObject pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(m_CurrentObject);
+
+        // check if actual
+        if(data.pointerPress == pointerUpHandler)
+        {
+            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerClickHandler);
+        }
+
+        // clear selected gameobject
+        eventSystem.SetSelectedGameObject(null);
+
+        // reset data
+        data.pressPosition = Vector2.zero;
+        data.pointerPress = null;
+        data.rawPointerPress = null;
     }
 }
