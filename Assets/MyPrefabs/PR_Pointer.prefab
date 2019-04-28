@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2254395323731799810}
   - component: {fileID: 3734219222612840889}
   - component: {fileID: 1522084236863507643}
+  - component: {fileID: 1982314637152416624}
   m_Layer: 0
   m_Name: PR_Pointer
   m_TagString: Untagged
@@ -50,8 +51,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DefaultLength: 5
   m_Dot: {fileID: 0}
-  trans: {fileID: 0}
   m_InputModule: {fileID: 0}
+  trans: {fileID: 0}
+  actionSet:
+    actionSetPath: 
+  triggerButton:
+    actionPath: 
+    needsReinit: 0
+  languageCubes: []
+  houseCubes: []
+  labCubes: []
+  morgueCubes: []
+  highlight: {fileID: 0}
+  normal: {fileID: 0}
 --- !u!20 &3740823719136069675
 Camera:
   m_ObjectHideFlags: 0
@@ -212,8 +224,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DefaultLength: 5
   m_Dot: {fileID: 0}
-  trans: {fileID: 0}
   m_InputModule: {fileID: 0}
+  trans: {fileID: 0}
+  actionSet:
+    actionSetPath: 
+  triggerButton:
+    actionPath: 
+    needsReinit: 0
+  languageCubes: []
+  houseCubes: []
+  labCubes: []
+  morgueCubes: []
+  highlight: {fileID: 0}
+  normal: {fileID: 0}
 --- !u!114 &1522084236863507643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +249,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b595b79c494b304fb5ea26f94e922a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Camera: {fileID: 0}
+  m_TargetSource: 0
+  m_ClickAction:
+    actionPath: 
+    needsReinit: 0
+--- !u!114 &1982314637152416624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40960253319472266}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1edef013f9ecb6408906afd2558f053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DefaultLength: 5
+  m_Dot: {fileID: 0}
+  trans: {fileID: 0}
+  actionSet:
+    actionSetPath: 
+  triggerButton:
+    actionPath: 
+    needsReinit: 0
+  olympusCubes: []
+  highlight: {fileID: 0}
+  normal: {fileID: 0}
 --- !u!1 &2314155532706845316
 GameObject:
   m_ObjectHideFlags: 0

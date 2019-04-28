@@ -16,14 +16,37 @@ public class Pointer_Language : MonoBehaviour
 
     private LineRenderer m_LineRenderer = null;
 
-    public GameObject[] olympusCubes;
+    //public GameObject[] olympusCubes;
     public Material highlight;
     public Material normal;
+
+
+    public Pointer pointer;
+    public Pointer_Language pointer_language;
+
+
+    public GameObject Player;
+    public GameObject PlayerPref;
+    //public GameObject SpawnLocation;
 
     private void Awake()
     {
         m_LineRenderer = GetComponent<LineRenderer>();
         actionSet.Activate(SteamVR_Input_Sources.Any, 0, true);
+
+
+        if (GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            // player already exists, so just move it to the spawn location and set the Player gameobject parameter
+            Player = GameObject.FindGameObjectWithTag("Player");
+            Player.transform.position = new Vector3(0f, 5f, 0f);
+        }
+        else
+        {
+            // instantiate the Player
+            Player = Instantiate(PlayerPref);
+            Player.transform.position = new Vector3(0f, 1f, 0f);
+        }
 
     }
 
@@ -73,7 +96,7 @@ public class Pointer_Language : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                olympusCubes[i].GetComponent<Renderer>().material = normal;
+                //olympusCubes[i].GetComponent<Renderer>().material = normal;
             }
         }
 
@@ -93,6 +116,8 @@ public class Pointer_Language : MonoBehaviour
         {
             if (hit.collider.tag == "Olympus")
             {
+                pointer_language.enabled = false;
+                pointer.enabled = true;
                 SceneManager.LoadScene(0);
             }
         }
@@ -104,7 +129,7 @@ public class Pointer_Language : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                olympusCubes[i].GetComponent<Renderer>().material = highlight;
+                //olympusCubes[i].GetComponent<Renderer>().material = highlight;
             }
         }
 
@@ -112,7 +137,7 @@ public class Pointer_Language : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                olympusCubes[i].GetComponent<Renderer>().material = normal;
+                //olympusCubes[i].GetComponent<Renderer>().material = normal;
             }
         }
     }

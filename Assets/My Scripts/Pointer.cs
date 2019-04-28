@@ -25,9 +25,31 @@ public class Pointer : MonoBehaviour
     public Material highlight;
     public Material normal;
 
+
+    public Pointer pointer;
+    public Pointer_Language pointer_language;
+
+
+    public GameObject Player;
+    public GameObject PlayerPref;
+    //public GameObject SpawnLocation;
+
     private void Awake()
     {
         m_LineRenderer = GetComponent<LineRenderer>();
+
+        if(GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            // player already exists, so just move it to the spawn location and set the Player gameobject parameter
+            Player = GameObject.FindGameObjectWithTag("Player");
+            Player.transform.position = new Vector3(0f, 5f, 0f);
+        }
+        else
+        {
+            // instantiate the Player
+            Player = Instantiate(PlayerPref);
+            Player.transform.position = new Vector3(0f, 5f, 0f);
+        }
     }
 
     private void Start()
@@ -99,6 +121,9 @@ public class Pointer : MonoBehaviour
         {
             if(hit.collider.tag == "Language")
             {
+                pointer.enabled = false;
+                pointer_language.enabled = true;
+
                 SceneManager.LoadScene(1);
             }
             else if (hit.collider.tag == "House")
