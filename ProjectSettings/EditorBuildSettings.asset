@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Mt Olympus.unity
+    guid: dbba397d415d6284ba39995a9b3d18aa
+  - enabled: 1
+    path: Assets/Scenes/Language.unity
+    guid: 58537742390913f4e8cfb0166aea053b
   m_configObjects: {}

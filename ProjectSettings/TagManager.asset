@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Language
+  - Olympus
+  - House
+  - Lab
+  - Morgue
   layers:
   - Default
   - TransparentFX

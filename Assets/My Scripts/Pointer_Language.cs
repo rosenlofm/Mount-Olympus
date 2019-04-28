@@ -5,20 +5,18 @@ using UnityEngine.EventSystems;
 using Valve.VR;
 using UnityEngine.SceneManagement;
 
-
-public class Pointer : MonoBehaviour
+public class Pointer_Language : MonoBehaviour
 {
     public float m_DefaultLength = 5.0f;
     public GameObject m_Dot;
-    public VRInputModule m_InputModule;
+    //public VRInputModule m_InputModule;
     public Transform trans;
     public SteamVR_ActionSet actionSet;
     public SteamVR_Action_Boolean triggerButton;
 
     private LineRenderer m_LineRenderer = null;
 
-    public GameObject[] languageCubes;
-    public GameObject[] houseCubes;
+    public GameObject[] olympusCubes;
     public Material highlight;
     public Material normal;
 
@@ -47,7 +45,7 @@ public class Pointer : MonoBehaviour
     private void UpdateLine()
     {
         // use default length or distance from input module
-        PointerEventData data = m_InputModule.GetData();
+        //PointerEventData data = m_InputModule.GetData();
         float targetLength = m_DefaultLength;
 
         // replace target length 
@@ -66,35 +64,27 @@ public class Pointer : MonoBehaviour
             endPosition = hit.point;
 
             // handle the hover-highlight state for the scene launchers
-            if (hit.collider.gameObject.tag == "Language")
+            if (hit.collider.gameObject.tag == "Olympus")
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    languageCubes[i].GetComponent<Renderer>().material = highlight;
+                    olympusCubes[i].GetComponent<Renderer>().material = highlight;
                 }
             }
-            else if (hit.collider.gameObject.tag == "HouseScene")
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    houseCubes[i].GetComponent<Renderer>().material = highlight;
-                }
-            }
+
             else
             {
-                for(int i = 0; i < 3; i++)
+                for (int i = 0; i < 3; i++)
                 {
-                    languageCubes[i].GetComponent<Renderer>().material = normal;
-                    houseCubes[i].GetComponent<Renderer>().material = normal;
+                    olympusCubes[i].GetComponent<Renderer>().material = normal;
                 }
             }
         }
         else
         {
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
-                languageCubes[i].GetComponent<Renderer>().material = normal;
-                houseCubes[i].GetComponent<Renderer>().material = normal;
+                olympusCubes[i].GetComponent<Renderer>().material = normal;
             }
         }
 
@@ -110,11 +100,11 @@ public class Pointer : MonoBehaviour
     {
         RaycastHit hit = CreateRaycast(m_DefaultLength);
 
-        if(hit.collider != null)
+        if (hit.collider != null)
         {
-            if(hit.collider.tag == "Language")
+            if (hit.collider.tag == "Olympus")
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(0);
             }
         }
 
