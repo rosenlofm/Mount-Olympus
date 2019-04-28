@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 9871577}
   m_Layer: 0
   m_Name: Olympus Scene Launcher
-  m_TagString: Language
+  m_TagString: Olympus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 260636797}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Language
+  m_TagString: Olympus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,10 +994,20 @@ PrefabInstance:
       propertyPath: trans
       value: 
       objectReference: {fileID: 643604161}
+    - target: {fileID: 2254395323731799810, guid: c46d6d982607bee489ccda7686711d41,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 89ac196cc9fc7cf439d5b302f91a95c6, type: 2}
     - target: {fileID: 1522084236863507643, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522084236863507643, guid: c46d6d982607bee489ccda7686711d41,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5022085517636183181, guid: c46d6d982607bee489ccda7686711d41, type: 3}
@@ -1036,10 +1046,18 @@ MonoBehaviour:
   triggerButton:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
-  languageCubes: []
-  houseCubes: []
+  olympusCubes:
+  - {fileID: 1723977113}
+  - {fileID: 1501479094}
+  - {fileID: 260636795}
   highlight: {fileID: 2100000, guid: b47736caddb8fb7408643c5181cdc259, type: 2}
   normal: {fileID: 2100000, guid: cc30959cdf758de4eae3f5b5ba8b03e3, type: 2}
+--- !u!20 &418308580 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3740823719136069675, guid: c46d6d982607bee489ccda7686711d41,
+    type: 3}
+  m_PrefabInstance: {fileID: 418308576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &444970194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1337,27 +1355,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
---- !u!1 &643604159 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 160596, guid: dc06161b6d97feb419f45f03b62e14b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 643604158}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &643604160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643604159}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f564536163a5404386b707709a20620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 0}
-  lineWidth: 0.1
-  lineMaxLength: 5
 --- !u!4 &643604161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 485514, guid: dc06161b6d97feb419f45f03b62e14b9,
@@ -1922,6 +1919,104 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2d917c03ec2a8f4fa1f6b552a34aa0f, type: 3}
+--- !u!1 &1231982626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231982630}
+  - component: {fileID: 1231982629}
+  - component: {fileID: 1231982628}
+  - component: {fileID: 1231982627}
+  m_Layer: 5
+  m_Name: Desk Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1231982627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231982626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1231982628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231982626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1231982629
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231982626}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 418308580}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1231982630
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231982626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -3.752, y: 0.75}
+  m_SizeDelta: {x: 1177, y: 303}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1235259326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2221,7 +2316,7 @@ GameObject:
   - component: {fileID: 1501479096}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Language
+  m_TagString: Olympus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2624,7 +2719,7 @@ GameObject:
   - component: {fileID: 1723977115}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Language
+  m_TagString: Olympus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

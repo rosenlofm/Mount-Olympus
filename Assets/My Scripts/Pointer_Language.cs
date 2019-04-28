@@ -23,11 +23,13 @@ public class Pointer_Language : MonoBehaviour
     private void Awake()
     {
         m_LineRenderer = GetComponent<LineRenderer>();
+        actionSet.Activate(SteamVR_Input_Sources.Any, 0, true);
+
     }
 
     private void Start()
     {
-        actionSet.Activate(SteamVR_Input_Sources.Any, 0, true);
+        //actionSet.Activate(SteamVR_Input_Sources.Any, 0, true);
     }
 
 
@@ -64,21 +66,8 @@ public class Pointer_Language : MonoBehaviour
             endPosition = hit.point;
 
             // handle the hover-highlight state for the scene launchers
-            if (hit.collider.gameObject.tag == "Olympus")
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    olympusCubes[i].GetComponent<Renderer>().material = highlight;
-                }
-            }
+            CheckHover(hit);
 
-            else
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    olympusCubes[i].GetComponent<Renderer>().material = normal;
-                }
-            }
         }
         else
         {
@@ -107,8 +96,25 @@ public class Pointer_Language : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
+    }
 
+    private void CheckHover(RaycastHit hit)
+    {
+        if (hit.collider.gameObject.tag == "Olympus")
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                olympusCubes[i].GetComponent<Renderer>().material = highlight;
+            }
+        }
 
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                olympusCubes[i].GetComponent<Renderer>().material = normal;
+            }
+        }
     }
 
     private RaycastHit CreateRaycast(float length)

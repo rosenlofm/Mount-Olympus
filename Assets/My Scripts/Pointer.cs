@@ -19,6 +19,9 @@ public class Pointer : MonoBehaviour
 
     public GameObject[] languageCubes;
     public GameObject[] houseCubes;
+    public GameObject[] labCubes;
+    public GameObject[] morgueCubes;
+
     public Material highlight;
     public Material normal;
 
@@ -66,28 +69,8 @@ public class Pointer : MonoBehaviour
             endPosition = hit.point;
 
             // handle the hover-highlight state for the scene launchers
-            if (hit.collider.gameObject.tag == "Language")
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    languageCubes[i].GetComponent<Renderer>().material = highlight;
-                }
-            }
-            else if (hit.collider.gameObject.tag == "HouseScene")
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    houseCubes[i].GetComponent<Renderer>().material = highlight;
-                }
-            }
-            else
-            {
-                for(int i = 0; i < 3; i++)
-                {
-                    languageCubes[i].GetComponent<Renderer>().material = normal;
-                    houseCubes[i].GetComponent<Renderer>().material = normal;
-                }
-            }
+            CheckHover(hit);
+
         }
         else
         {
@@ -95,6 +78,8 @@ public class Pointer : MonoBehaviour
             {
                 languageCubes[i].GetComponent<Renderer>().material = normal;
                 houseCubes[i].GetComponent<Renderer>().material = normal;
+                labCubes[i].GetComponent<Renderer>().material = normal;
+                morgueCubes[i].GetComponent<Renderer>().material = normal;
             }
         }
 
@@ -116,9 +101,62 @@ public class Pointer : MonoBehaviour
             {
                 SceneManager.LoadScene(1);
             }
+            else if (hit.collider.tag == "House")
+            {
+                SceneManager.LoadScene(1);
+            }
+            else if (hit.collider.tag == "Lab")
+            {
+                SceneManager.LoadScene(1);
+            }
+            else if (hit.collider.tag == "Morgue")
+            {
+                SceneManager.LoadScene(1);
+            }
         }
 
+    }
 
+    private void CheckHover(RaycastHit hit)
+    {
+        if (hit.collider.gameObject.tag == "Language")
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                languageCubes[i].GetComponent<Renderer>().material = highlight;
+            }
+        }
+        else if (hit.collider.gameObject.tag == "House")
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                houseCubes[i].GetComponent<Renderer>().material = highlight;
+            }
+        }
+        else if(hit.collider.gameObject.tag == "Lab")
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                labCubes[i].GetComponent<Renderer>().material = highlight;
+            }
+        }
+        else if (hit.collider.gameObject.tag == "Morgue")
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                morgueCubes[i].GetComponent<Renderer>().material = highlight;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                languageCubes[i].GetComponent<Renderer>().material = normal;
+                houseCubes[i].GetComponent<Renderer>().material = normal;
+                labCubes[i].GetComponent<Renderer>().material = normal;
+                morgueCubes[i].GetComponent<Renderer>().material = normal;
+            }
+        }
     }
 
     private RaycastHit CreateRaycast(float length)
