@@ -1616,67 +1616,80 @@ PrefabInstance:
         type: 3}
       propertyPath: m_InputModule
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7057600765559200497, guid: cd90ae6b9a7ff1445a7536ca37274d5a,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: languageCubes.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7097895528266943334, guid: cfe81fa54407bee4eaa661e4121e7161,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: languageCubes.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2288194154792489938, guid: 2d2a2bf9daacf184ca74813f7a8de190,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: languageCubes.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 856846740918397099, guid: 117b38bb8a758f742ada064ba9adb5b2,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: houseCubes.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6077623505865062818, guid: 163c23209a7c997419a5f667e34c2705,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: houseCubes.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8032272096748907740, guid: 8ca157a916f46e047a845e0c60e31173,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: houseCubes.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1573444376394018983, guid: 6f8325e9cbfd4634ab502d570618b94c,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: labCubes.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6191657894899770631, guid: be5722f5cf1d4ec42b4ce9847805e621,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: labCubes.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7856818218914824858, guid: ecfe621076b913841ba6632d34654de4,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: labCubes.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2995430419894937479, guid: a2f36161aa9b50341a13ae9c4acf2b8a,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: morgueCubes.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4250387360687998954, guid: 7e39ca505471d2140a55e838f1add318,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: morgueCubes.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 901310446911649592, guid: a51c40b0cd6ec5049992ee602056fea9,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: morgueCubes.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2981869436177736718, guid: 210bf3d0a493eb9448778b81416b45b0,
+        type: 3}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: SpawnLocation
@@ -1691,12 +1704,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Dot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2845069200938656303}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: trans
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8437996466916335397}
     - target: {fileID: 3734219222612840889, guid: c46d6d982607bee489ccda7686711d41,
         type: 3}
       propertyPath: highlight

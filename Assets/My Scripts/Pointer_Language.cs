@@ -39,7 +39,7 @@ public class Pointer_Language : MonoBehaviour
         {
             // player already exists, so just move it to the spawn location and set the Player gameobject parameter
             Player = GameObject.FindGameObjectWithTag("Player");
-            Player.transform.position = new Vector3(0f, 5f, 0f);
+            Player.transform.position = new Vector3(0f, 1f, 0f);
         }
         else
         {
@@ -118,6 +118,7 @@ public class Pointer_Language : MonoBehaviour
             {
                 pointer_language.enabled = false;
                 pointer.enabled = true;
+                Destroy(GameObject.FindGameObjectWithTag("Player"));
                 SceneManager.LoadScene(0);
             }
         }
